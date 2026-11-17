@@ -1,28 +1,29 @@
 # Duplicate Killer (`spoonart-duplicate-killer`)
 
-**Duplicate Killer** adalah *meta-engineering skill* yang dirancang untuk mengaudit, menganalisis, dan mengeliminasi instruksi atau skill yang terduplikasi dan saling tumpang tindih (*overlapping*) pada sistem multi-agent (seperti Google Antigravity, Cursor, Claude Code, dan AI agent frameworks lainnya).
+**Duplicate Killer** is a meta-engineering skill designed to audit, analyze, and eliminate duplicate or overlapping skills and instructions across multi-agent systems (including Google Antigravity, Cursor, Claude Code, and other AI agent architectures).
 
 ---
 
-## 🎯 Tujuan Utama
+## 🎯 Key Objectives
 
-- **Menghemat Token Context Window:** Mengurangi overhead token instruksi hingga 40%–70% dengan memangkas aturan berulang pada system prompt.
-- **Mencegah Tabrakan Instruksi (*Instruction Collision*):** Menghilangkan konflik aturan antar-skill yang memicu kebingungan model (*hesitation*), output non-deterministik, atau halusinasi.
-- **Konsolidasi Skill Tanpa Kehilangan Informasi (*Lossless Consolidation*):** Menggabungkan beberapa skill domain yang terfragmentasi menjadi satu *master skill* berdensitas tinggi dengan tetap mempertahankan seluruh batasan teknis, regex, konfigurasi, dan edge cases penting.
-
----
-
-## 🔍 Analisis 4-Dimensi Redundansi
-
-Skill ini mengevaluasi duplikasi instruksi berdasarkan 4 aspek:
-1. **Lexical & Semantic Redundancy:** Membandingkan daftar kata terlarang (*banned words*), panduan gaya penulisan, nada bicara (*tone*), dan format output.
-2. **Constraint & Threshold Duplication:** Mendeteksi batasan teknis, aturan performa, atau validasi yang secara fungsional identik.
-3. **Tool & Resource Redundancy:** Memeriksa deklarasi MCP tools, perintah CLI, skrip pendukung, atau API wrapper yang duplikat.
-4. **Artifact Output Overlap:** Mengidentifikasi skill yang menghasilkan skema output atau tipe berkas yang sama.
+- **Reduce Context Window Token Overhead:** Cut instruction prompt token waste by 40% to 70% by eliminating redundant rules and duplicated guidance.
+- **Prevent Instruction Collisions:** Resolve contradictory directives between overlapping skills that cause model hesitation, nondeterministic outputs, or hallucinations.
+- **Lossless Skill Consolidation:** Merge fragmented domain skills into high-density master skills while preserving all technical thresholds, regex patterns, code snippets, hardware specifications, and critical edge cases.
 
 ---
 
-## ⚡ Protokol Eksekusi 5 Langkah
+## 🔍 Four-Dimensional Overlap Analysis
+
+Skills are evaluated for redundancy across four key dimensions:
+
+1. **Lexical & Semantic Redundancy:** Compares banned word lists, style guidelines, tone definitions, and formatting directives.
+2. **Constraint & Threshold Duplication:** Identifies functionally identical performance rules, validation gates, and technical thresholds.
+3. **Tool & Resource Redundancy:** Audits duplicated MCP tools, CLI command wrappers, helper scripts, and API bindings.
+4. **Artifact Output Overlap:** Detects skills generating identical file types, schemas, or output structures.
+
+---
+
+## ⚡ 5-Step Execution Protocol
 
 ```
 [1. SCAN & PROFILE] ──► [2. PAIRWISE MATRIX] ──► [3. AUDIT REPORT (GATE)]
@@ -31,14 +32,15 @@ Skill ini mengevaluasi duplikasi instruksi berdasarkan 4 aspek:
 [5. VERIFY & CLEAN] ◄── [4. LOSSLESS MERGE] ◄──────────────┘
 ```
 
-1. **Scan & Token Profile:** Memindai file skill (`SKILL.md`, rules) dan mengestimasi beban token per turn.
-2. **Pairwise Comparison Matrix:** Mengelompokkan skill ke dalam kategori domain dan menghitung persentase tumpang tindih (*Overlap Ratio*). Klaster dengan rasio $\ge 50\%$ ditandai untuk konsolidasi.
-3. **Pre-Merge Audit Report (Mandatory Gate):** Menyajikan laporan audit transparan kepada pengguna sebelum melakukan modifikasi berkas apa pun.
-4. **Lossless Synthesis Engine:** Mensintesis *master skill* berdensitas tinggi dengan membuang basa-basi/filler tanpa mengurangi fakta konkret.
-5. **Agent Rebinding & Verification:** Memperbarui konfigurasi agent ke *master skill* baru serta mengarsipkan skill lama yang redundan.
+1. **Scan & Token Profile:** Recursively scan skill directories (`SKILL.md`, rules) and estimate token footprint per turn.
+2. **Pairwise Comparison Matrix:** Group skills into domain buckets and calculate the Overlap Ratio. Clusters with an overlap of 50% or higher are flagged for consolidation.
+3. **Pre-Merge Audit Report (Mandatory Gate):** Present a comprehensive audit report with projected token savings to the user before modifying any files.
+4. **Lossless Synthesis Engine:** Synthesize high-density master skills by stripping conversational filler and deduplicating prose without losing concrete facts.
+5. **Agent Rebinding & Verification:** Rebind agent configurations to the new master skills and safely archive legacy redundant files.
 
 ---
 
-## 📁 Direktori & Berkas
+## 📁 Repository Structure
 
-- [spoonart-duplicate-killer/SKILL.md](file:///Volumes/Work/skills-collection/spoonart-duplicate-killer/SKILL.md) : Spesifikasi dan protokol lengkap skill.
+- [spoonart-duplicate-killer/SKILL.md](file:///Volumes/Work/skills-collection/spoonart-duplicate-killer/SKILL.md): Full skill specification and operational instructions.
+- [spoonart-duplicate-killer/README.md](file:///Volumes/Work/skills-collection/spoonart-duplicate-killer/README.md): Quick reference and links.
