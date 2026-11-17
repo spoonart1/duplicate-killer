@@ -4,6 +4,47 @@
 
 ---
 
+## 🚀 How to Install
+
+You can install this skill into your local project workspace or globally across your agent environment.
+
+### Option 1: Workspace Installation (Recommended)
+
+Clone the repository directly into your project's agent skills directory:
+
+```bash
+# For Google Antigravity / agent workflows (.agents/skills or .gemini/skills)
+mkdir -p .agents/skills
+git clone https://github.com/spoonart1/duplicate-killer.git .agents/skills/spoonart-duplicate-killer
+```
+
+### Option 2: Global Installation (Google Antigravity)
+
+To make `spoonart-duplicate-killer` available across all workspaces on your machine:
+
+```bash
+git clone https://github.com/spoonart1/duplicate-killer.git ~/.gemini/config/skills/spoonart-duplicate-killer
+```
+
+### Option 3: Manual Integration (Cursor / Claude Code / Custom Agents)
+
+Copy or symlink [spoonart-duplicate-killer/SKILL.md](file:///Volumes/Work/skills-collection/spoonart-duplicate-killer/SKILL.md) into your agent configuration directory:
+- **Google Antigravity:** `.agents/skills/spoonart-duplicate-killer/SKILL.md`
+- **Cursor:** `.cursor/rules/duplicate-killer.mdc`
+- **Claude Code:** `.claude/skills/duplicate-killer/SKILL.md`
+
+---
+
+## 💡 How to Use
+
+Once installed, trigger the audit by instructing your agent in chat:
+
+> *"Audit all skills in this repository for duplicates and token overlap using `spoonart-duplicate-killer`."*
+
+The skill will run the 5-step execution protocol, quantify token savings, and present an audit report before applying any changes.
+
+---
+
 ## 🎯 Key Objectives
 
 - **Reduce Context Window Token Overhead:** Cut instruction prompt token waste by 40% to 70% by eliminating redundant rules and duplicated guidance.
@@ -43,4 +84,4 @@ Skills are evaluated for redundancy across four key dimensions:
 ## 📁 Repository Structure
 
 - [spoonart-duplicate-killer/SKILL.md](file:///Volumes/Work/skills-collection/spoonart-duplicate-killer/SKILL.md): Full skill specification and operational instructions.
-- [spoonart-duplicate-killer/README.md](file:///Volumes/Work/skills-collection/spoonart-duplicate-killer/README.md): Quick reference and links.
+- [spoonart-duplicate-killer/README.md](file:///Volumes/Work/skills-collection/spoonart-duplicate-killer/README.md): Quick reference and installation links.
